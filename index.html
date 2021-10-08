@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gussi</title>
+    <link rel="preload" href="fonts/rajdhani.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/rajdhanibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+</html>
+<body></body>
+<div class="container">
+  <header class="main-header"><a class="main-header__link">
+      <picture>
+        <source media="(min-width: 1360px)" srcset="img/logo-desktop.svg"><img src="img/logo.svg" alt="Логотип">
+      </picture></a></header>
+  <main class="main-page">
+    <section class="slider">
+      <!--главный контейнер слайдера-->
+      <div class="swiper swiper-container">
+        <!--обязательная оболочка-->
+        <div class="swiper__wrapper swiper-wrapper">
+          <!--слайды-->
+          <div class="swiper__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 1360px)" srcset="img/slider-desktop-img1.jpg">
+              <source media="(min-width: 720px)" srcset="img/slider-tablet-img1.jpg"><img class="swiper__img" src="img/slider-img1.jpg" width="320" height="600">
+            </picture>
+            <div class="swiper__text-wrap">
+              <h2 class="swiper__title">Light coat</h2>
+              <p class="swiper__description">More cotton, more freedom</p>
+            </div>
+          </div>
+          <div class="swiper__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 1360px)" srcset="img/slider-desktop-img2.jpg">
+              <source media="(min-width: 720px)" srcset="img/slider-tablet-img2.jpg"><img class="swiper__img" src="img/slider-img2.jpg">
+            </picture>
+            <div class="swiper__text-wrap">
+              <h2 class="swiper__title">Sandy longsleeve</h2>
+              <p class="swiper__description">More cotton, more freedom</p>
+            </div>
+          </div>
+          <div class="swiper__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 1360px)" srcset="img/slider-desktop-img3.jpg">
+              <source media="(min-width: 720px)" srcset="img/slider-tablet-img3.jpg"><img class="swiper__img" src="img/slider-img3.jpg">
+            </picture>
+            <div class="swiper__text-wrap">
+              <h2 class="swiper__title">Lime jacket</h2>
+              <p class="swiper__description">More cotton, more freedom</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper__pagination swiper-pagination"></div>
+        <button class="swiper__button-prev swiper-button-prev"></button>
+        <button class="swiper__button-next swiper-button-next"></button>
+      </div>
+    </section>
+    <section class="order">
+      <section class="form-wrapper">
+        <form class="form">
+          <input class="total__input" type="hidden" value="120" name="sum">
+          <h2 class="form__title">New collection</h2>
+          <div class="form__text-wrap">
+            <h1 class="form__heading">Gussi light coat</h1>
+            <p class="form__description">It takes you from the party to the after party with its fashion-forward styles. A playfull blend of retro and modern outdoor design.</p>
+          </div>
+          <div class="form__parameters-wrap">
+            <div class="form__color-size-wrap">
+              <div class="form__color color">
+                <h2 class="color__title">Colour</h2>
+                <div class="color__wrap">
+                  <input class="color__input" type="radio" name="color" id="color-one">
+                  <label class="color__label color__label--violet" for="color-one"></label>
+                  <input class="color__input" type="radio" name="color" id="color-two">
+                  <label class="color__label color__label--gray-blue" for="color-two"></label>
+                  <input class="color__input" type="radio" name="color" id="color-three">
+                  <label class="color__label color__label--blue" for="color-three"></label>
+                </div>
+              </div>
+              <div class="form__size size">
+                <h2 class="size__title">Size</h2>
+                <div class="size__wrap">
+                  <input class="size__input" type="radio" name="size" id="size-one">
+                  <label class="size__label size__label--xs" for="size-one"><span class="size__size-name size__size-name--xs">XS</span></label>
+                  <input class="size__input" type="radio" name="size" id="size-two">
+                  <label class="size__label size__label--s" for="size-two"><span class="size__size-name size__size-name--s">S</span></label>
+                  <input class="size__input" type="radio" name="size" id="size-three">
+                  <label class="size__label size__label--m" for="size-three"><span class="size__size-name size__size-name--m">M</span></label>
+                  <input class="size__input" type="radio" name="size" id="size-four">
+                  <label class="size__label size__label--l" for="size-four"><span class="size__size-name size__size-name--l">L</span></label>
+                  <input class="size__input" type="radio" name="size" id="size-five">
+                  <label class="size__label size__label--xl disabled" for="size-five"><span class="size__size-name size__size-name--xl">XL</span></label>
+                  <button class="size__btn" type="button">Size guide</button>
+                </div>
+              </div>
+            </div>
+            <div class="form__total-wrap">
+              <div class="form__total total">
+                <h2 class="total__title">Quantity</h2>
+                <div class="total__wrap">
+                  <button class="total__btn-change-count total__btn-minus" type="button" disabled="disabled">
+                    <svg class="total__svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.5692 8.72998H3.43077C3.14359 8.72998 3 8.60035 3 8.34109V7.61887C3 7.35961 3.14359 7.22998 3.43077 7.22998H12.5692C12.8564 7.22998 13 7.35961 13 7.61887V8.34109C13 8.60035 12.8564 8.72998 12.5692 8.72998Z" fill=""></path>
+                    </svg>
+                  </button>
+                  <input class="total__input" type="number" value="1">
+                  <button class="total__btn-change-count total__btn-plus" type="button">
+                    <svg class="total__svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.82278 7.21717H12.6203C12.8734 7.21717 13 7.34343 13 7.59596V8.40404C13 8.63973 12.8734 8.75758 12.6203 8.75758H8.82278V12.596C8.82278 12.8653 8.6962 13 8.44304 13H7.58228C7.32911 13 7.20253 12.8653 7.20253 12.596V8.75758H3.37975C3.12658 8.75758 3 8.63973 3 8.40404V7.59596C3 7.34343 3.12658 7.21717 3.37975 7.21717H7.20253V3.40404C7.20253 3.13468 7.32911 3 7.58228 3H8.44304C8.6962 3 8.82278 3.13468 8.82278 3.40404V7.21717Z" fill=""></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="total__sum-wrap">
+                <h2 class="total__title total__title--cost">Cost</h2>
+                <div class="total__cost-wrap"><span class="total__dollar">$</span><span class="total__sum"><span class="total__num">120</span>.00</span></div>
+              </div>
+            </div>
+            <div class="product-details">
+              <h2 class="product-details__title">Product details</h2>
+              <p class="product-details__description">Look out for its standout party dresses, feminine details, statement jackets and cool denim including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear and swimwear ranges.</p><span class="product-details__composition">63% Viscose, 37% Polyamide.</span>
+              <button class="product-details__btn button" type="submit">Order now</button>
+            </div>
+            <div class="delivery-details">
+              <h3 class="delivery-details__title">Delivery
+                <button class="delivery-details__btn" type="button"></button>
+              </h3>
+              <div class="delivery-details__content-descr">
+                Delivered on or before Monday, 25 February 2019 Note: Subject to placing your order before specific cut-off times. Details available in checkout.
+                For free delivery – spend over £18.08
+              </div>
+            </div>
+            <div class="delivery-details">
+              <h3 class="delivery-details__title">Return
+                <button class="delivery-details__btn" type="button"></button>
+              </h3>
+              <div class="delivery-details__content-descr">
+                Return through your local Boxberry store available in over 2,300 locations.
+                You can create your return on the carrier website by clicking the create return link.
+                Open 7 days a week, early until late.
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="similar-collection">
+        <h2 class="similar-collection__title">Similar collections</h2>
+        <div class="similar-collection__link-wrap"><a class="similar-collection__link" href="#">
+            <picture>
+              <source media="(min-width: 1360px)" srcset="img/kingsman-style-desktop-img.jpg">
+              <source media="(min-width: 720px)" srcset="img/kingsman-style-tablet-img.jpg"><img class="similar-collection__img" src="img/kingsman-style-mob-img.jpg">
+            </picture>
+            <div class="similar-collection__text-wrap">
+              <p class="similar-collection__text">Kingsman style</p>
+              <p class="similar-collection__text-two">More silk, more freedom</p>
+            </div></a><a class="similar-collection__link" href="#">
+            <picture>
+              <source media="(min-width: 1360px)" srcset="img/denim-goddess-desktop-img.jpg">
+              <source media="(min-width: 720px)" srcset="img/denim-goddess-tablet-img.jpg"><img class="similar-collection__img" src="img/denim-goddess-mob-img.jpg">
+            </picture>
+            <div class="similar-collection__text-wrap">
+              <p class="similar-collection__text">Denim goddess</p>
+              <p class="similar-collection__text-two">More denim, more freedom</p>
+            </div></a></div>
+      </section>
+      <section class="form-subscribe-wrap">
+        <h2 class="form-subscribe__title">Subscribe our newsletter</h2>
+        <p class="form-subscribe__descr">Get notified about new collections of Gussi Store</p>
+        <form class="form-subscribe">
+          <input class="form-subscribe__input" type="text" placeholder="Enter your name" required>
+          <label class="form-subscribe__label"></label>
+          <input class="form-subscribe__input" type="email" placeholder="Enter your e-mail" required>
+          <label class="form-subscribe__label"></label>
+          <div class="form-subscribe__gender">
+            <label class="form-subscribe__gender-title">Choose your gender:</label>
+            <div class="form-subscribe__gender-wrapper">
+              <div class="form-subscribe__gender-wrap">
+                <input class="form-subscribe__input-radio" type="radio" name="gender" id="gender-male">
+                <label class="form-subscribe__gender-male" for="gender-male">Male</label>
+                <input class="form-subscribe__input-radio" type="radio" name="gender" id="gender-female">
+                <label class="form-subscribe__gender-female" for="gender-female">Female</label>
+              </div>
+            </div>
+          </div>
+          <input class="form-subscribe__input-checkbox" type="checkbox" id="checkbox">
+          <label class="form-subscribe__label-checkbox" for="checkbox">Look out for its standout party dresses, feminine details</label>
+          <button class="form-subscribe__btn button" type="submit">Subscribe Gussi</button>
+        </form>
+      </section>
+    </section>
+  </main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/index.js"></script>
