@@ -1,0 +1,19 @@
+section(class="form-subscribe-wrap")
+	h2(class="form-subscribe__title") Subscribe our newsletter
+	p(class="form-subscribe__descr") Get notified about new collections of Gussi Store
+	form(class="form-subscribe")
+		input(class="form-subscribe__input" type="text" placeholder="Enter your name" required)
+		label(class="form-subscribe__label")
+		input(class="form-subscribe__input" type="email" placeholder="Enter your e-mail" required)
+		label(class="form-subscribe__label")
+		div(class="form-subscribe__gender")
+			label(class="form-subscribe__gender-title") Choose your gender:
+			div(class="form-subscribe__gender-wrapper")
+				div(class="form-subscribe__gender-wrap")
+					input(class="form-subscribe__input-radio" type="radio" name="gender" id="gender-male")
+					label(class="form-subscribe__gender-male" for="gender-male") Male
+					input(class="form-subscribe__input-radio" type="radio" name="gender" id="gender-female")
+					label(class="form-subscribe__gender-female" for="gender-female") Female
+		input(class="form-subscribe__input-checkbox" type="checkbox" id="checkbox")
+		label(class="form-subscribe__label-checkbox" for="checkbox") Look out for its standout party dresses, feminine details
+		button(class="form-subscribe__btn button" type="submit") Subscribe Gussi

@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	@include reset;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	@include font-family;
+	line-height: 24px;
+	background: $primary-white;
+	color: $primary-violet;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	border-style: none;
+}

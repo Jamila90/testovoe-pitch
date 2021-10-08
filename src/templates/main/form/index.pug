@@ -1,0 +1,65 @@
+block variable
+- var numCols = [{"num": "one", "col": "violet"}, {"num": "two", "col": "gray-blue"}, {"num": "three", "col": "blue"}]
+- var numSize = [{"num": "one", "size": "xs", "name": "XS", "sizeName": "xs"}, {"num": "two", "size": "s", "name": "S", "sizeName": "s"}, {"num": "three", "size": "m", "name": "M", "sizeName": "m"}, {"num": "four", "size": "l", "name": "L", "sizeName": "l"}, {"num": "five", "size": "xl disabled", "name": "XL", "sizeName": "xl"}]
+- var sum = "120";
+
+section(class="form-wrapper")
+	form(class="form")
+		input(class="total__input" type="hidden" value=`${sum}` name="sum")
+		h2(class="form__title") New collection
+		div(class="form__text-wrap")
+			h1(class="form__heading") Gussi light coat
+			p(class="form__description") It takes you from the party to the after party with its fashion-forward styles. A playfull blend of retro and modern outdoor design.
+		div(class="form__parameters-wrap")
+			div(class="form__color-size-wrap")
+				div(class="form__color color")
+					h2(class="color__title") Colour
+					div(class="color__wrap")
+						each item in numCols
+							input(class="color__input" type="radio" name="color" id=`color-${item.num}`)
+							label(for=`color-${item.num}` class=`color__label color__label--${item.col}`)
+				div(class="form__size size")
+					h2(class="size__title") Size
+					div(class="size__wrap")
+						each item in numSize
+							input(class="size__input" type="radio" name="size" id=`size-${item.num}`)
+							label(for=`size-${item.num}` class=`size__label size__label--${item.size}`)
+								span(class=`size__size-name size__size-name--${item.sizeName}`)= `${item.name}`
+						button(class="size__btn" type="button") Size guide
+			div(class="form__total-wrap")
+				div(class="form__total total")
+					h2(class="total__title") Quantity
+					div(class="total__wrap")
+						button(type="button" class="total__btn-change-count total__btn-minus" disabled="disabled")
+							svg(class="total__svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M12.5692 8.72998H3.43077C3.14359 8.72998 3 8.60035 3 8.34109V7.61887C3 7.35961 3.14359 7.22998 3.43077 7.22998H12.5692C12.8564 7.22998 13 7.35961 13 7.61887V8.34109C13 8.60035 12.8564 8.72998 12.5692 8.72998Z" fill="")
+						input(type="number" value="1" class="total__input")
+						button(type="button" class="total__btn-change-count total__btn-plus")
+							svg(class="total__svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+								path(d="M8.82278 7.21717H12.6203C12.8734 7.21717 13 7.34343 13 7.59596V8.40404C13 8.63973 12.8734 8.75758 12.6203 8.75758H8.82278V12.596C8.82278 12.8653 8.6962 13 8.44304 13H7.58228C7.32911 13 7.20253 12.8653 7.20253 12.596V8.75758H3.37975C3.12658 8.75758 3 8.63973 3 8.40404V7.59596C3 7.34343 3.12658 7.21717 3.37975 7.21717H7.20253V3.40404C7.20253 3.13468 7.32911 3 7.58228 3H8.44304C8.6962 3 8.82278 3.13468 8.82278 3.40404V7.21717Z" fill="")
+				div(class="total__sum-wrap")
+					h2(class="total__title total__title--cost") Cost
+					div(class="total__cost-wrap")
+						span(class="total__dollar") $
+						span(class="total__sum")
+							span(class="total__num") #{sum}
+							|.00
+			div(class="product-details")
+				h2(class="product-details__title") Product details
+				p(class="product-details__description") Look out for its standout party dresses, feminine details, statement jackets and cool denim including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear and swimwear ranges.
+				span(class="product-details__composition") 63% Viscose, 37% Polyamide.
+				button(class="product-details__btn button" type="submit") Order now
+			div(class="delivery-details")
+				h3(class="delivery-details__title") Delivery
+					button(class="delivery-details__btn" type="button")
+				div(class="delivery-details__content-descr")
+					| Delivered on or before Monday, 25 February 2019 Note: Subject to placing your order before specific cut-off times. Details available in checkout.
+					| For free delivery – spend over £18.08
+
+			div(class="delivery-details")
+				h3(class="delivery-details__title") Return
+					button(class="delivery-details__btn" type="button")
+				div(class="delivery-details__content-descr")
+					| Return through your local Boxberry store available in over 2,300 locations.
+					| You can create your return on the carrier website by clicking the create return link.
+					| Open 7 days a week, early until late.

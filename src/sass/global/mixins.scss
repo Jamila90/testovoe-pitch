@@ -1,0 +1,15 @@
+@mixin font-family {
+	font-family: "Rajdhani", "Roboto", sans-serif;
+}
+
+@mixin reset {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin for-title {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $primary-gray-blue;
+}

@@ -1,0 +1,61 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.27.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "gh-pages": "^3.2.3",
+    "gulp": "4.0.x",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "^9.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "4.0.x",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-pug-lint": "^0.1.6",
+    "pixel-glass": "^1.0.13",
+    "postcss": "^8.3.5",
+    "posthtml-include": "^1.2.0",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.2.0"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint && eslint src/js/main.js",
+    "prettier": "prettier ./src/**/*.{scss,js} --write",
+    "build": "gulp build",
+    "start": "gulp start",
+    "webp": "gulp webp",
+    "sprite": "gulp sprite",
+    "deploy": "gh-pages -d build"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.pug",
+    "src/js/**/script.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "14.17.3"
+  },
+  "dependencies": {
+    "del": "^4.1.1",
+    "pug": "^3.0.2"
+  }
+}

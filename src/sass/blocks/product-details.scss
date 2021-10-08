@@ -1,0 +1,39 @@
+.product-details {
+	margin-bottom: 45px;
+
+	@media (min-width: 1360px) {
+		margin-bottom: 38px;
+	}
+}
+
+.product-details__title {
+	margin: 0 0 5px;
+	padding: 0 15px;
+	@include for-title;
+}
+
+.product-details__description {
+	margin: 0 0 9px;
+	padding: 0 15px;
+	font-weight: 500;
+}
+
+.product-details__composition {
+	display: block;
+	margin: 0 0 39px;
+	padding: 0 15px;
+	font-weight: 500;
+	color: $primary-gray-blue;
+
+	@media (min-width: 1360px) {
+		margin: 0 0 70px;
+	}
+}
+
+.product-details__btn {
+	width: 90%;
+	justify-content: center;
+	@media (min-width: 720px) {
+		width: 96%;
+	}
+}

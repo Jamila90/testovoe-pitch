@@ -1,0 +1,154 @@
+.size {
+	margin-bottom: 32px;
+
+	@media (min-width: 720px) {
+		padding: 0 10px;
+	}
+
+	@media (min-width: 1360px) {
+		padding: 0;
+		margin-bottom: 16px;
+	}
+}
+
+.size__wrap {
+	margin-bottom: 17px;
+	padding: 0 4px;
+
+	@media (min-width: 720px) {
+		display: flex;
+		align-items: center;
+		padding: 0 0 0 25px;
+	}
+
+	@media (min-width: 1360px) {
+		padding: 0 0 0 39px;
+	}
+}
+
+.size__title {
+	margin-bottom: 0;
+	padding: 0 15px;
+	@include for-title;
+
+	@media (min-width: 720px) {
+		padding: 0 38px;
+	}
+
+	@media (min-width: 1360px) {
+		margin-bottom: 7px;
+	}
+}
+
+.size__input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.size__input + .size__label {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	margin-right: 1px;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+
+	@media (min-width: 720px) {
+		margin-right: 4px;
+	}
+
+	@media (min-width: 1360px) {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.size__input:checked + .size__label {
+	&--xs {
+		border-radius: 50px;
+		border: 2px solid $primary-violet;
+	}
+
+	&--s {
+		border-radius: 50px;
+		border: 2px solid $primary-violet;
+	}
+
+	&--m {
+		border-radius: 50px;
+		border: 2px solid $primary-violet;
+	}
+	&--l {
+		border-radius: 50px;
+		border: 2px solid $primary-violet;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 48px;
+		height: 48px;
+		border-radius: 50px;
+	}
+
+	&:hover {
+		border: 2px solid $primary-violet;
+		opacity: 0.5;
+	}
+}
+
+.size__size-name {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 20px;
+	font-weight: 500;
+	transform: translate(-50%, -50%);
+	color: $primary-gray-blue;
+
+	@media (min-width: 1360px) {
+		font-size: 16px;
+	}
+}
+
+.size__input:checked + .size__label .size__size-name {
+	font-size: 28px;
+	color: $primary-violet;
+
+	@media (min-width: 1360px) {
+		font-size: 20px;
+	}
+}
+
+.size__btn {
+	display: block;
+	width: 92px;
+	font-size: 15px;
+	margin-left: 12px;
+	margin-top: 17px;
+	padding: 4px 0;
+	background-color: transparent;
+	border-radius: 24px;
+	border: 1px solid $sandy;
+	color: $sandy;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $sandy;
+		color: $primary-white;
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
+
+	@media (min-width: 720px) {
+		margin-top: 0;
+	}
+
+	@media (min-width: 1360px) {
+		margin-left: 14px;
+	}
+}

@@ -1,0 +1,32 @@
+//главный контейнер слайдера
+div(class="swiper swiper-container")
+	//обязательная оболочка
+	div(class="swiper__wrapper swiper-wrapper")
+		//слайды
+		div(class="swiper__slide swiper-slide")
+			picture
+				source(media="(min-width: 1360px)" srcset="img/slider-desktop-img1.jpg")
+				source(media="(min-width: 720px)" srcset="img/slider-tablet-img1.jpg")
+				img(class="swiper__img" src="img/slider-img1.jpg" width="320" height="600")
+			div(class="swiper__text-wrap")
+				h2(class="swiper__title") Light coat
+				p(class="swiper__description") More cotton, more freedom
+		div(class="swiper__slide swiper-slide")
+			picture
+				source(media="(min-width: 1360px)" srcset="img/slider-desktop-img2.jpg")
+				source(media="(min-width: 720px)" srcset="img/slider-tablet-img2.jpg")
+				img(class="swiper__img" src="img/slider-img2.jpg")
+			div(class="swiper__text-wrap")
+				h2(class="swiper__title") Sandy longsleeve
+				p(class="swiper__description") More cotton, more freedom
+		div(class="swiper__slide swiper-slide")
+			picture
+				source(media="(min-width: 1360px)" srcset="img/slider-desktop-img3.jpg")
+				source(media="(min-width: 720px)" srcset="img/slider-tablet-img3.jpg")
+				img(class="swiper__img" src="img/slider-img3.jpg")
+			div(class="swiper__text-wrap")
+				h2(class="swiper__title") Lime jacket
+				p(class="swiper__description") More cotton, more freedom
+	div(class="swiper__pagination swiper-pagination")
+	button(class="swiper__button-prev swiper-button-prev")
+	button(class="swiper__button-next swiper-button-next")

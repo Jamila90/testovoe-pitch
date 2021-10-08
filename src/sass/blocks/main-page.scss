@@ -1,0 +1,8 @@
+.main-page {
+	display: flex;
+	flex-direction: column;
+	@media (min-width: 1360px) {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
